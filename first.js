@@ -126,8 +126,9 @@ window.onload = function() {
 
 //Node
 function sendAnswerToServer(first, second) {
+	var first = encodeURI(first);
 	var xhr = new XMLHttpRequest();
-	xhr.open("GET", '/answer/' + first + "/" + second, true);
+	xhr.open("GET", '/answer/' + 123 + "/" + second, true);
 	xhr.onreadystatechange = function() {
 		if(xhr.readyState == 4) {
 			alert(xhr.responseText);
