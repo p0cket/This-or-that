@@ -52,17 +52,27 @@ function getThatPost() {
 	$("#thatDialog").dialog("open");
 }
 
+function loadThisPost() {
+	console.log("load post");
+}
 
-$( "#thisDialog" ).submit(function( event ) {
-  	getPost(curPoll)
-	thisPoints++;
-	console.log("this points:" + thisPoints);
-});
+// $( "#thisDialog" ).submit(function( event ) {
+//   	getPost(curPoll)
+// 	thisPoints++;
+// 	alert("this points:" + thisPoints);
+// 	event.preventDefault();
+// });
 
-$( "#thatDialog" ).submit(function( event ) {
-  	getPost(curPoll)
-	thisPoints++;
-	console.log("this points:" + thisPoints);
+// $( "#thatDialog" ).submit(function( event ) {
+//   	getPost(curPoll)
+// 	thatPoints++;
+// 	alert("this points:" + thatPoints);
+// 	event.preventDefault();
+// });
+
+
+$('#thisForm').submit(function(event) {
+	console.log("yo yo");
 });
 
 
