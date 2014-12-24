@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
   	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
   	<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>  
+
+  	<script type="text/javascript" src="first.js"></script>
 </head>
 
 <body>
@@ -41,9 +43,35 @@
 
         </div>
 		<div id="thisDialog" title="this dialog">
-		  <p>This is some dialog</p>
+		  <form>
+		    <fieldset>
+		      <label for="name">Name</label>
+		      <input type="text" name="name" id="name" value="Jane Smith" class="text ui-widget-content ui-corner-all">
+		      <label for="email">Email</label>
+		      <input type="text" name="email" id="email" value="jane@smith.com" class="text ui-widget-content ui-corner-all">
+		      <label for="password">Password</label>
+		      <input type="password" name="password" id="password" value="xxxxxxx" class="text ui-widget-content ui-corner-all">
+		 
+		      <!-- Allow form submission with keyboard without duplicating the dialog button -->
+		      <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+		    </fieldset>
+		  </form>
+		</div>
+
 		<div id="thatDialog" title="that dialog">
-		  <p>That is some dialog</p>
+			<form>
+		    <fieldset>
+		      <label for="name">Name</label>
+		      <input type="text" name="name" id="name" value="Jane Smith" class="text ui-widget-content ui-corner-all">
+		      <label for="email">Email</label>
+		      <input type="text" name="email" id="email" value="jane@smith.com" class="text ui-widget-content ui-corner-all">
+		      <label for="password">Password</label>
+		      <input type="password" name="password" id="password" value="xxxxxxx" class="text ui-widget-content ui-corner-all">
+		 
+		      <!-- Allow form submission with keyboard without duplicating the dialog button -->
+		      <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+		    </fieldset>
+		  </form>
 		</div>
         <!--
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
@@ -64,7 +92,5 @@
 		  </div>
 		</div>
 	-->
-	<script type="text/javascript" src="first.js"></script>
-    <script type="text/javascript" src="popup.js"></script>
 </body>
 </html>
