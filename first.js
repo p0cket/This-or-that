@@ -43,7 +43,9 @@ polls[2] = {
 
 function getPost(i) {
 	document.getElementById("thisImage").src = polls[i].thisImage;
+	tImage = document.getElementById("thisImage").src;
 	document.getElementById("thisName").innerHTML = polls[i].thisName;
+	tName = document.getElementById("thisName").innerHTML
 
 	document.getElementById("thatImage").src = polls[i].thatImage;
 	document.getElementById("thatName").innerHTML = polls[i].thatName;
@@ -60,15 +62,16 @@ function getThatPost() {
 }
 
 function loadThisPost() {
-	console.log("load this post");
 	testVariableThis=document.getElementById("thatReason").value;
+	console.log(testVariableThis);
 	document.getElementById("ui-id-2").click();
 	getPost(curPoll);
 }
 
 function loadThatPost() {
-	console.log("load that post");
 	testVariableThat=document.getElementById("thatReason").value;
+	console.log(testVariableThat);
+	document.getElementById("ui-id-2").click();
 	getPost(curPoll);
 }
 
@@ -96,8 +99,16 @@ $('#thisForm').submit(function(event) {
 //   event.preventDefault();
 // });
 
-function loadNextPost() {
+function loadNextThisPost() {
+	sendAnswerToServer(tImage, tName);
+	loadThisPost();
 }
+
+function loadNextThatPost(){
+	sendAnswerToServer;
+	loadThatPost();
+}
+
 
 $(document).ready(function() {
     $("#thisDialog").dialog({
@@ -110,6 +121,20 @@ $(document).ready(function() {
 
 window.onload = function() {
 	getPost(curPoll);
+}
+
+
+//Node
+function sendAnswerToServer(first, second) {
+	var xhr = new XMLHttpRequest();
+	xhr.open("GET", '/answer/' + first + "/" + second, true);
+	xhr.onreadystatechange = function() {
+		if(xhr.readyState == 4) {
+			alert(xhr.responseText);
+		}
+	}
+	xhr.send();
+
 }
 
 
