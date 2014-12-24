@@ -42,25 +42,15 @@
             </div>
 
         </div>
-		<div id="thisDialog" title="Results">
+		<div id="thisDialog" title="Results: You chose this">
 			<p>38        42</p>
-		  <form id="thisForm">
-		    <fieldset>
-		      <label for="reason">Reason</label>
-		      <input type="reason" name="reason" id="reason" value="xxxxxxx" class="text ui-widget-content ui-corner-all">
-		 
-		      <!-- Allow form submission with keyboard without duplicating the dialog button -->
-		      <input type="submit" tabindex="-1" style="position:absolute;">
-		    </fieldset>
-		  </form>
+			  <textarea rows="4" cols="30">this is sample text</textarea>
+		      <button onclick=loadThisPost()>lol</button>
 		</div>
 
 		<div id="thatDialog" title="Results: You chose that">
-			  <textarea rows="4" cols="30">this is sample text
-			  </textarea>
-
-		 
-		      <!-- Allow form submission with keyboard without duplicating the dialog button -->
+			<p>40        44</p>
+			  <textarea rows="4" cols="30">this is sample text</textarea>
 		      <button onclick=loadThisPost()>lol</button>
 		</div>
         <!--
