@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+    <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css">
+    <link rel="stylesheet" href="main.css">
+    <!-- jquery below -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+  	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  	<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>  
+</head>
+
+<body>
+
+	<div class="nav">
+    	<h1>This or That</h1>
+	</div>
+
+    <div class="thisOrThat">
+        <div class="container">
+            <div class="row">
+                <div class="this">
+                    <div class="col-md-6">
+                    	<div id="thisWell" class="well well-small" onclick="getThisPost()">
+	                        <img id="thisImage" src="" class="img-responsive vertical-center">
+	                        <h2 id="thisName"></h2>
+                    	</div>
+                    </div>
+                </div>
+                <div class="that">
+                    <div class="col-md-6">
+                    	<div id="thatWell" class="well well-small" onclick="getThatPost()">
+	                        <img id="thatImage" src="" class="vertical-center img-responsive">
+	                        <h2 id="thatName"></h2>
+                    	</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+		<div id="thisDialog" title="this dialog">
+		  <p>This is some dialog</p>
+		<div id="thatDialog" title="that dialog">
+		  <p>That is some dialog</p>
+		</div>
+        <!--
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+		      </div>
+		      <div class="modal-body">
+		        ...
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-primary">Save changes</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	-->
+	<script type="text/javascript" src="first.js"></script>
+    <script type="text/javascript" src="popup.js"></script>
+</body>
+</html>
