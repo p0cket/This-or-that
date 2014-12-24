@@ -76,11 +76,10 @@ $(document).ready(function() {
     $("#thisDialog").dialog({
         autoOpen: false,
     });
-}
+});
 
 window.onload = function() {
 	getPost(curPoll);
-
 }
 
 
