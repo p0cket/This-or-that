@@ -44,10 +44,12 @@ function getPost(i) {
 }
 
 function getThisPost() {
-    $( "#thisDialog" ).dialog();
+	console.log("you gotted this post");
+    $("#thisDialog").dialog("open");
 }
 function getThatPost() {
-	$( "#thatDialog" ).dialog();
+	console.log("you gotted that post");
+	$("#thatDialog").dialog("open");
 }
 
 
@@ -83,7 +85,6 @@ $(document).ready(function() {
 
 window.onload = function() {
 	getPost(curPoll);
-	getThatPost();
 }
 
 
