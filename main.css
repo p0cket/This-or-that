@@ -1,6 +1,15 @@
+.navbar {
+	color: white;
+	padding: 3px 10px;
+	font-size: 44;
+	font-weight: bold;
+}
+
 .well {
 	
 }
+
+
 .row  .img-responsive {
 	width: auto;
     display: block;

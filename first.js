@@ -62,11 +62,14 @@ function getThatPost() {
 function loadThisPost() {
 	console.log("load this post");
 	testVariableThis=document.getElementById("thatReason").value;
+	document.getElementById("ui-id-2").click();
+	getPost(curPoll);
 }
 
 function loadThatPost() {
 	console.log("load that post");
 	testVariableThat=document.getElementById("thatReason").value;
+	getPost(curPoll);
 }
 
 // $( "#thisDialog" ).submit(function( event ) {
