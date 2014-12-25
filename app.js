@@ -14,9 +14,11 @@ app.get('/answer/:firstAnswer/:secondAnswer/:chosenAnswer', function(req, res) {
 	var chosenAnswer = req.params.chosenAnswer;
 
 	if(chosenAnswer === 1) {
+		console.log("a point should be going to the THIS now.")
 		count1++;
 	}
 	else {
+		console.log("a point should be going to the THAT now.")
 		count2++;
 	}
 });

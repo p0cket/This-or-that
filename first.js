@@ -102,12 +102,12 @@ $('#thisForm').submit(function(event) {
 // });
 
 function loadNextThisPost() {
-	sendAnswerToServer(tImage, tName);
+	sendAnswerToServer(tImage, tName, 1);
 	loadThisPost();
 }
 
 function loadNextThatPost(){
-	sendAnswerToServer;
+	sendAnswerToServer(tImage, tName, 2);
 	loadThatPost();
 }
 
@@ -127,10 +127,10 @@ window.onload = function() {
 
 
 //Node
-function sendAnswerToServer(first, second) {
-	var first = encodeURI(first);
+function sendAnswerToServer(first, second, answer) {
+	var first = encodeURIComponent(first);
 	var xhr = new XMLHttpRequest();
-	xhr.open("GET", '/answer/' + 123 + "/" + second, true);
+	xhr.open("GET", '/answer/' + first + "/" + second + "/" + answer, true);
 	xhr.onreadystatechange = function() {
 		if(xhr.readyState === 4) {
 			alert(xhr.responseText);
