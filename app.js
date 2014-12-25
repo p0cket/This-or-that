@@ -5,12 +5,20 @@ app.use(express.static(__dirname));
 app.get('/', function (req, res) {
   res.sendfile('index.html')
 })
+var count1 = 0;
+var count2 = 0;
 
-app.get('/answer/:firstAnswer/:secondAnswer', function(req, res) {
+app.get('/answer/:firstAnswer/:secondAnswer/:chosenAnswer', function(req, res) {
 	var first = req.params.firstAnswer;
-	console.log("first now equals");
 	var second = req.params.secondAnswer;
-	console.log("second now equals");
+	var chosenAnswer = req.params.chosenAnswer;
+
+	if(chosenAnswer === 1) {
+		count1++;
+	}
+	else {
+		count2++;
+	}
 });
 
 var server = app.listen(3000, function () {

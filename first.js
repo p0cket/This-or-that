@@ -48,7 +48,9 @@ function getPost(i) {
 	tName = document.getElementById("thisName").innerHTML
 
 	document.getElementById("thatImage").src = polls[i].thatImage;
+	thImage = document.getElementById("thisImage").src;
 	document.getElementById("thatName").innerHTML = polls[i].thatName;
+	thName = document.getElementById("thisName").innerHTML
 	curPoll++;
 }
 
@@ -130,13 +132,14 @@ function sendAnswerToServer(first, second) {
 	var xhr = new XMLHttpRequest();
 	xhr.open("GET", '/answer/' + 123 + "/" + second, true);
 	xhr.onreadystatechange = function() {
-		if(xhr.readyState == 4) {
+		if(xhr.readyState === 4) {
 			alert(xhr.responseText);
 		}
 	}
 	xhr.send();
-
 }
+
+
 
 
 
