@@ -25,7 +25,7 @@
             <div class="row">
                 <div class="this">
                     <div class="col-md-6">
-                    	<div id="thisWell" class="well well-small" onclick="getThisPost()">
+                    	<div id="thisWell" class="well well-small" onclick="loadNextThisPost()">
 	                        <img id="thisImage" src="" class="img-responsive vertical-center">
 	                        <h2 id="thisName"></h2>
                     	</div>
@@ -33,7 +33,7 @@
                 </div>
                 <div class="that">
                     <div class="col-md-6">
-                    	<div id="thatWell" class="well well-small" onclick="getThatPost()">
+                    	<div id="thatWell" class="well well-small" onclick="loadNextThatPost()">
 	                        <img id="thatImage" src="" class="vertical-center img-responsive">
 	                        <h2 id="thatName"></h2>
                     	</div>
@@ -43,13 +43,13 @@
 
         </div>
 		<div id="thisDialog" title="Results: You chose this">
-			<p>38        42</p>
+			<p id="resultsCount1"></p><p>"       "</p><p id="resultsCount2"></p>
 			  <textarea rows="4" cols="30" id='thisReason'>this is sample text</textarea>
 		      <button onclick=loadNextThisPost()>lol</button>
 		</div>
 
 		<div id="thatDialog" title="Results: You chose that">
-			<p>40        44</p>
+			<p id="resultsCount1"></p><p>"       "</p><p id="resultsCount2"></p>
 			  <textarea id="thatReason" rows="4" cols="30">this is sample text</textarea>
 		      <button onclick=loadNextThatPost()>lol</button>
 		</div>

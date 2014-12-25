@@ -13,14 +13,21 @@ app.get('/answer/:firstAnswer/:secondAnswer/:chosenAnswer', function(req, res) {
 	var second = req.params.secondAnswer;
 	var chosenAnswer = req.params.chosenAnswer;
 
-	if(chosenAnswer === 1) {
+	if(chosenAnswer === "1") {
 		console.log("a point should be going to the THIS now.")
 		count1++;
 	}
-	else {
+	else if(chosenAnswer === "2"){
 		console.log("a point should be going to the THAT now.")
 		count2++;
 	}
+	console.log("REQUEST RECIEVED : " + chosenAnswer);
+
+	//
+	//	find scores
+	//
+
+	res.send(chosenAnswer + ":" + count1 + ":" + count2);
 });
 
 var server = app.listen(3000, function () {

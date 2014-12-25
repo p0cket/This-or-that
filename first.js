@@ -5,6 +5,7 @@ var thatPoints = 0;
 var testVariableThis = "";
 var testVariableThat = "";
 
+var answers = [];
 
 // Polls.023923
 // function Polls(thisImage, thisName, thatImage, thatName){
@@ -54,14 +55,13 @@ function getPost(i) {
 	curPoll++;
 }
 
-function getThisPost() {
+function showScore(count1, count2) {
+	document.getElementById("resultsCount1").textContent = count1;
+	document.getElementById("resultsCount2").textContent = count2;
 	console.log("you gotted this post");
     $("#thisDialog").dialog("open");
 }
-function getThatPost() {
-	console.log("you gotted that post");
-	$("#thatDialog").dialog("open");
-}
+
 
 function loadThisPost() {
 	testVariableThis=document.getElementById("thatReason").value;
@@ -103,12 +103,11 @@ $('#thisForm').submit(function(event) {
 
 function loadNextThisPost() {
 	sendAnswerToServer(tImage, tName, 1);
-	loadThisPost();
 }
 
 function loadNextThatPost(){
 	sendAnswerToServer(tImage, tName, 2);
-	loadThatPost();
+	
 }
 
 
@@ -133,7 +132,24 @@ function sendAnswerToServer(first, second, answer) {
 	xhr.open("GET", '/answer/' + first + "/" + second + "/" + answer, true);
 	xhr.onreadystatechange = function() {
 		if(xhr.readyState === 4) {
-			alert(xhr.responseText);
+			// RESPONSE
+			var resp = xhr.responseText;
+			alert(resp);
+			// manipulation of response
+			var scores = resp.split(":");
+			var chosen = scores[0];
+			var firstScore = scores[1];
+			var secondScore = scores[2];
+			console.log(firstScore);
+			console.log(secondScore);
+
+			// code for making popup appear and changing score values in popup
+			console.log("CHOSEN :  "+ chosen)
+			showScore(firstScore, secondScore);
+			
+
+
+
 		}
 	}
 	xhr.send();
