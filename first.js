@@ -36,7 +36,7 @@ polls[2] = {
 	thisImage: "http://www.joomla51.com/demo/0115/images/portfolio-base/image03.jpg",
 	thisName: "A hot cup of coffee",
 	thisReasons: [],
-	thatImage: "http://barnalab.stanford.edu/page6/files/stacks_image_442.png",
+	thatImage: "http://i.imgur.com/pUwYtvm.jpg",
 	thatName: "Night Vision Hawk",
 	thatReasons: []
 }
